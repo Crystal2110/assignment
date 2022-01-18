@@ -8,17 +8,15 @@ const awards = ["Sword", "Shield","Coins"];
 const enemies = ["Wolf", "Monster", "Dragon"];
 //const playerActions = ["Walk", "Print", "Exit"];
 let playerHealth = 50;
-
 let killNum = 0;
 let inventory = [];
-
 let pickUp = awards[Math.floor(Math.random() * awards.length)];
 
 function game(){
     
     const attackPower = Math.floor(Math.random() * (10-1) + 1 );
     const enemy = enemies[Math.floor(Math.random() * enemies.length)]; 
-    const enemysPower = Math.floor(Math.random() * (10-2) + 1);
+    const enemysPower = Math.floor(Math.random() * (10-1) + 1);
     let enemyHealth = 25;
 
     
