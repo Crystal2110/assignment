@@ -6,9 +6,8 @@ var userName = readlineSync.question("Please enter your name: ");
 
 const awards = ["Sword", "Shield","Coins"];
 const enemies = ["Wolf", "Monster", "Dragon"];
-const playerActions = ["Walk", "Print", "Exit"];
+//const playerActions = ["Walk", "Print", "Exit"];
 let playerHealth = 50;
-let enemyHealth = 25;
 let isAlive = true;
 let killNum = 0;
 let inventory = [];
@@ -23,9 +22,7 @@ function game(){
     let enemyHealth = 25;
 
     
-    
-   
-        const options = readlineSync.keyIn( "Please choose your next move. You can \nPress 'W' to Walk.  \nPress 'P' to Print. \nPress 'E' to Exit the game.", {limit: '$<w, p, e>'}); 
+    const options = readlineSync.keyIn(  "Please choose your next move. You can \nPress 'W' to Walk.  \nPress 'P' to Print. \nPress 'E' to Exit the game.", {limit: '$<w, p, e>'}); 
     if(options == "e"){
         console.log("Exit the game.");
         isAlive = false
