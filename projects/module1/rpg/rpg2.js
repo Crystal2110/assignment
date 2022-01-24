@@ -54,15 +54,15 @@ function fight(){
     while(isFight){
     const fightOrRun = readlineSync.keyIn("Press 'F' to flight. \nPress'R' to run.");
     if(fightOrRun ==="f"){
-        battle()
+        battle(isFight)
     }else if (fightOrRun ==="r"){
         return run()
     }
     }
 }
 
-function battle(){
-    isFighting = true;
+function battle(isFight){
+   // isFighting = true;
     const enemy = enemies[Math.floor(Math.random() * enemies.length)];
     const attackPower = Math.floor(Math.random() * (10-1) +1 );
     const enemysPower = Math.floor(Math.random() * (10-1) + 1);
@@ -88,6 +88,7 @@ function battle(){
             console.log("You found a " + pickUp + " on the " + enemy);
             inventory.push(" " + pickUp);               
             }
+            isFight= false
         }if (playerHealth <= 0) {
             console.log(enemy + " has defeated you. You are dead.")
             console.log("\n" + userName + " :  \nName: " + userName + " \nHealth: " + playerHealth + "\nKills " + killNum +  "\nItem: " + inventory);

@@ -8,16 +8,16 @@ var FizsBuzzOutput = "";
 for (var i = 1; i <= 100; i++ ){
     if(i % 15 === 0){
         fizzbuzz+=1;   
-        document.write("fizzbuzz" + " ");
+        console.log("fizzbuzz" + " ");
     }else if(i % 3 === 0){
         fizz+=1
-        document.write("fizz" + " ");
+        console.log("fizz" + " ");
     }else if(i % 5 === 0){
         buzz+=1
-        document.write("buzz" + " ")
+        console.log("buzz" + " ")
     }else{
         
-        document.write(i + " ")
+        console.log(i + " ")
     }
 }
     

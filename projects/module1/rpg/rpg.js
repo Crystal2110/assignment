@@ -30,7 +30,7 @@ function game(){
         console.log(userName + " has nothing in inventory.");  
         }else{
         console.log("\nName: " + userName + " \nHealth: " + playerHealth + "\nKills " + killNum +  "\nItem: " + inventory);
-        return playerHealth = 0;
+        //return playerHealth = 0;
         }
     }else if(options == "w"){
 
