@@ -2,36 +2,43 @@
 
 <html>
     <head>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
-            <h1>Add</h1>
-            <form name="add-form">
-                
-                <input type="number" name="number1" placeholder="enter the number"> +
-                <input type="number" name="number2" placeholder="enter the number">
-                <button>Submit</button>    
-            </form>
-        </div>
-        <div>
-            <h1>Subtract</h1>
-            <form name="subtract-form">
-                
-                <input type="number" name="number1" placeholder="enter the number"> -
-                <input type="number" name="number2" placeholder="">
-                <button>Submit</button>    
-            </form>
             
-        </div>
-        <div>
-            <h1>Subtract</h1>
-            <form name="subtract-form">
-                
-                <input type="number" name="number1" placeholder="enter the number"> *
-                <input type="number" name="number2" placeholder="enter the number">
-                <button>Submit</button>    
-            </form>
+            <form name="calculate-form">
+                <div class = "Add">
+                <h1>Add</h1>
+                <input type="number" name="num1" id="num1" placeholder="enter the number">
+                +
+                <input type="number" name="num2" id="num2" placeholder="enter the number">
+                <button type="button" value="+" onclick="add()"> Submit </button>    
+                <p id="result1"></p>
+                </div>
+        
             
-        </div>
+            
+                <div class = "Sub">
+                <h1>Subtract</h1>
+                <input type="number" name="num3" id="num3" placeholder="enter the number"> 
+                -
+                <input type="number" name="num4" id="num4" placeholder="enter the number">
+                <button type="button" value="-" onclick="sub()">Submit</button>
+                <p id="result2"></p>    
+                </div>
+        
+            
+            
+                <div class = "Mul">
+                <h1>Multiply</h1>
+                <input type="number" name="num5" id="num5" placeholder="enter the number">
+                *
+                <input type="number" name="num6" id="num6" placeholder="enter the number">
+                <button type="button" onclick="mul()">Submit</button>    
+                <p id="result3"></p> 
+                </div>
+
+            </form>
+            <script src="index.js"></script>
     </body>
 </html>
