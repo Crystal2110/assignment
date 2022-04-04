@@ -1,0 +1,284 @@
+.boxes{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 200px );
+    grid-template-rows: repeat(8,100px);
+    grid-gap: 4rem;
+    grid-row-gap:2rem;
+    justify-content: center;
+    list-style:none;
+
+}
+
+.button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 1.5rem 3rem;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+}
+
+.button--stop {
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 850;
+    font-style: italic;
+    font-size: 1.15rem;
+    background-color:rgb(134, 141, 177);
+    transition-duration: 1s;
+}
+
+.button--stop:hover{
+    background-color:rgb(220, 205, 255);
+    
+}
+
+.button--start{
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 850;
+    font-style: italic;
+    font-size: 1.15rem;
+    transition-duration: 2.5s;
+    transition-timing-function: ease-in;   
+}
+
+.button--start:hover{
+    background-color: rgb(190, 155, 108);
+    border-radius: 40rem;
+    border: 4px dotted rgb(233, 196, 162);
+    
+
+}
+
+.button--bass {
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 850;
+    font-style: italic;
+    font-size: 1.15rem;
+    transition-duration: 5s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--bass:hover{
+    background-color:rgb(197, 139, 152);
+    border-radius: 10px 100px / 120px;
+    border: 2px solid #000;
+   
+}
+.button--volume{
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 850;
+    font-style: italic;
+    font-size: 1.15rem;
+    transition-duration: 5s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--volume:hover{
+    background-color:rgb(130, 156, 88);
+    box-shadow: rgba(40, 60, 71, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.button--layer{
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 850;
+    font-style: italic;
+    font-size: 1.15rem;
+    height:100px;
+    width:200px;
+    background: linear-gradient(
+        0deg,
+        rgb(190, 206, 120) 20%,
+        rgb(235, 241, 235) 50%,
+        rgb(238, 154, 114) 98%
+    );
+    transition: width 2s;
+}
+
+.button--layer:hover {
+    height:120px;
+    width:220px;
+}
+
+.button--mute {
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 850;
+    font-style: italic;
+    font-size: 1.15rem;
+    background-color:rgb(109, 165, 160);
+
+}
+
+.button--mute:hover {
+    margin: 2em;
+    padding:15%;
+}
+
+.button--random {
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 850;
+    font-style: italic;
+    font-size: 1.15rem;
+    background-color: rgb(241, 192, 119);
+    position: relative;
+    top: 0px;
+    transition-duration: 3s;
+    
+}
+
+.button--random:hover{
+    position: relative;
+    background-color:rgb(203, 255, 196);
+    top: 10px;
+    
+}
+
+.button--timer{
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 850;
+    font-style: italic;
+    font-size: 1.15rem;
+    background-image: url("flower.JPG");
+    background-size:200px,200px;
+    opacity: 0.5;
+}
+
+.button--timer:hover{
+    background-color:rgb(208, 236, 105);
+    opacity: 1.0;
+}
+
+
+/* .button::before,
+.button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} */
+/* .button--stop{
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 850;
+    font-style: italic;
+    font-size: 1.15rem;
+    border-radius: 40rem;
+    border: 2px solid #000;
+    box-shadow: inset 0 0 0 0px #000;
+    transition: border-radius 0.5s, box-shadow 0.5s, color 0.5s;
+	transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--stop:hover {
+	color: #e7e7e7;
+	border-radius: 80%;
+	box-shadow: inset 0 0 0 50px #000;
+	transition-delay: 0s, 0s, 0.2s;
+}
+
+.button--start{
+    overflow: hidden;
+    font-family: obvia, sans-serif;
+    font-weight: 800;
+	font-style: italic;
+	font-size: 1.15rem;
+	color: #fff;
+}
+
+.button--start {
+	content: '';
+	background: #000;
+	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+	transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.button--start:hover {
+	background: #000;
+	-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.button--start span {
+	display: block;
+	mix-blend-mode: difference;
+	transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.button--start:hover span {
+	transform: translate3d(-10px,0,0);
+
+}
+
+.button--bass {
+    font-family: obvia, sans-serif;
+    border: 2px solid #000;
+	border-radius: 3rem;
+	overflow: hidden;
+	color: rgb(255, 255, 255);
+    font-weight: 850;
+    font-style: italic;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function:ease-in-out;
+    transition-delay: 0.4s; 
+    /* transition: transform 1s cubic-bezier(0.7, 0.5, 0.2, 1); */
+ /* } 
+
+.button--bass span {
+    position: relative;
+	mix-blend-mode:difference;
+}
+
+
+
+.button--bass:hover {
+	background-color: #000;
+}   */
+/* 
+.button--volume {
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+	font-weight: 700;
+	font-size: 0.85rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	color: #fff;
+	background: #e7e7e7;
+}
+
+.button--mimas span {
+	position: relative;
+	mix-blend-mode: difference;
+}
+
+.button--mimas::before {
+	content: '';
+	background: #000;
+	width: 120%;
+	left: -10%;
+	transform: skew(30deg);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.button--mimas:hover::before {
+	transform: translate3d(100%,0,0);
+} */
+
+
+
+
+
